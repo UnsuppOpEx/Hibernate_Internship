@@ -8,4 +8,5 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @ComponentScan("aop")
 @EnableAspectJAutoProxy
 public class MyConfig {
+
 }
