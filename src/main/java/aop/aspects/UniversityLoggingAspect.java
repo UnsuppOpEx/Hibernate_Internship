@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-@Aspect
 public class UniversityLoggingAspect {
 //    @Before("execution(* getStudents())")
 //    public void beforeGetStudentsLoggingAdvice() {

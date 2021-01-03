@@ -9,8 +9,6 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
-@Aspect
-@Order(1)
 public class LoggingAspect {
     @Before("aop.aspects.MyPointcuts.allAddMethods()")
     public void beforeAddLoggingAdvice(JoinPoint joinPoint) {
