@@ -11,11 +11,11 @@ public class Employee {
     @Column(name = "id")
     private int id;
 
+    @Column(name = "name")
+    private String firstname;
+
     @Column(name = "surname")
     private String surname;
-
-    @Column(name = "name")
-    private String name;
 
     @Column(name = "department")
     private String department;
@@ -28,7 +28,7 @@ public class Employee {
 
     public Employee(String surname, String name, String department, int salary) {
         this.surname = surname;
-        this.name = name;
+        this.firstname = name;
         this.department = department;
         this.salary = salary;
     }
@@ -38,7 +38,7 @@ public class Employee {
         return "Employee{" +
                 "id=" + id +
                 ", surname='" + surname + '\'' +
-                ", name='" + name + '\'' +
+                ", name='" + firstname + '\'' +
                 ", department='" + department + '\'' +
                 ", salary=" + salary +
                 '}';
@@ -60,12 +60,12 @@ public class Employee {
         this.surname = surname;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
     public String getDepartment() {
