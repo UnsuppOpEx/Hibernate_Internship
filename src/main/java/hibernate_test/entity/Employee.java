@@ -1,4 +1,4 @@
-package aop.hibernate_test.entity;
+package hibernate_test.entity;
 
 import javax.persistence.*;
 

@@ -1,13 +1,11 @@
-package aop.hibernate_test;
+package hibernate_test;
 
-import aop.hibernate_test.entity.Employee;
+import hibernate_test.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import java.util.List;
-
-public class Test3 {
+public class Test5 {
     public static void main(String[] args) {
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
@@ -18,20 +16,16 @@ public class Test3 {
             Session session = factory.getCurrentSession();
             session.beginTransaction();
 
-//            List<Employee> emps = session.createQuery("from Employee")
-//                    .getResultList();
+//            Employee emp = session.get(Employee.class, 1);
+//            session.delete(emp);
 
-            List<Employee> emps = session.createQuery("from Employee " +
-                    "where surname = 'Aleksandr' AND salary > 500")
-                    .getResultList();
+            session.createQuery("delete Employee where firstname = 'Aleksandr'").executeUpdate();
 
-            for (Employee e: emps) {
-                System.out.println(e);
-            }
             session.getTransaction().commit();
 
 
             System.out.println("done!");
+
         } finally {
             factory.close();
         }
