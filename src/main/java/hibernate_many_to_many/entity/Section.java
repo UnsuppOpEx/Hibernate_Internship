@@ -37,7 +37,7 @@ public class Section {
             children = new ArrayList<>();
         }
         children.add(child);
-        System.out.println("Добавил ребёнка в секцию");
+        System.out.println("The child was added to the section!");
     }
 
     public int getId() {
